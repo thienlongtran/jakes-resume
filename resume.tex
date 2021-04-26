@@ -32,6 +32,8 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
+\usepackage{fontawesome}
+
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -105,6 +107,36 @@
 
 \begin{document}
 
+%----------HEADER SETINGS----------
+\def \linkedinicon {\faLinkedin}
+\def \linkedinlink {https://www.linkedin.com/in/thienlongtran}
+\def \linkedintext {/thienlongtran}
+
+\def \phoneicon {\faPhone}
+\def \phonetext {(346)-204-9381}
+
+\def \emailicon {\faEnvelope}
+\def \emaillink {mailto:tltran5@uno.edu}
+\def \emailtext {tltran5@uno.edu}
+
+\def \githubicon {\faGithub}
+\def \githublink {https://github.com/thienlongtran}
+\def \githubtext {/thienlongtran}
+
+\def \websiteicon {\faGlobe}
+\def \websitelink {https://www.thienlongtran.com/}
+\def \websitetext {/thienlongtran.com}
+
+
+\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
+\def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
+\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
+\def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
+\def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
+
+
+
+
 %----------HEADING----------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 %   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
@@ -112,10 +144,11 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge \scshape Thien Tran} \\ \vspace{1pt}
+    {\email} $|$ 
+    {\website} $|$
+    {\linkedin} $|$
+    {\github}
 \end{center}
 
 
