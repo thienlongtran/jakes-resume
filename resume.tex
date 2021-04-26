@@ -109,22 +109,28 @@
 \begin{document}
 
 %----------HEADER SETINGS----------
+\def \linkedinicon {\faLinkedin}
 \def \linkedinlink {https://www.linkedin.com/in/thienlongtran}
 \def \linkedintext {/thienlongtran}
 
+\def \emailicon {\faEnvelope}
 \def \emaillink {mailto:tltran5@uno.edu}
 \def \emailtext {tltran5@uno.edu}
 
+\def \githubicon {\faGithub}
 \def \githublink {https://github.com/thienlongtran}
 \def \githubtext {/thienlongtran}
 
+\def \websiteicon {\faGlobe}
 \def \websitelink {https://www.thienlongtran.com/}
 \def \websitetext {/thienlongtran.com}
 
-\def \linkedin {\hspace{3pt}\href{\linkedinlink}{\linkedintext}}
-\def \email {\hspace{3pt}\href{\emaillink}{\emailtext}}
-\def \github {\hspace{3pt}\href{\githublink}{\githubtext}}
-\def \website {\hspace{3pt}\href{\websitelink}{\websitetext}}
+\definecolor{LinkColor}{HTML}{3e70bb}
+
+\def \linkedin {\linkedinicon\hspace{3pt}\textcolor{LinkColor}{\href{\linkedinlink}{\linkedintext}}}
+\def \email {\emailicon\hspace{3pt}\textcolor{LinkColor}{\href{\emaillink}{\emailtext}}}
+\def \github {\githubicon \hspace{3pt}\textcolor{LinkColor}{\href{\githublink}{\githubtext}}}
+\def \website {\websiteicon\hspace{3pt}\textcolor{LinkColor}{\href{\websitelink}{\websitetext}}}
 
 
 %----------HEADING----------
@@ -135,15 +141,10 @@
 
 \begin{center}
     \textbf{\Huge \scshape Thien Tran} \\ \vspace{1pt}
-    \definecolor{LinkColor}{HTML}{3e70bb}
-    \emailicon {\faEnvelope} 
-    \textcolor{LinkColor}{\email} $|$ 
-    \websiteicon {\faGlobe}
-    \textcolor{LinkColor}{\website} $|$
-    \linkedinicon {\faLinkedin}
-    \textcolor{LinkColor}{\linkedin} $|$
-    \githubicon {\faGithub}
-    \textcolor{LinkColor}{\github}
+    {\email} $|$ 
+    {\website} $|$
+    {\linkedin} $|$
+    {\github}
 \end{center}
 
 
