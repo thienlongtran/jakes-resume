@@ -170,7 +170,7 @@
     \small{\item{
      \textbf{Languages}{: Java, Python, HTML/CSS, JavaScript} \\
      \textbf{Technologies}{: Git, Unity, Jupyter Notebook} \\
-     \textbf{Libraries}{: Pandas, NumPy, Matplotlib}
+     \textbf{Libraries}{: NumPy, Pandas, Matplotlib}
     }}
  \end{itemize}
 
@@ -217,13 +217,14 @@
           {\textbf{Warframe Inventory Market Info} $|$ \emph{Python, OpenCV, PyTesseract}}{}
           \resumeItemListStart
             \resumeItem{Developed a program that gathers 4 different attributes about users’ in-game Warframe inventory items including live web market value, and saves important information to an Excel spreadsheet.}
-            \resumeItem{Detected items automatically using OpenCV to isolate item names from the image by thresholding the text colors, and using PyTesseract to read the remaining text.}
+            \resumeItem{Generated a names-list of 358 types of items automatically using OpenCV to isolate item names from the inventory-screen image by thresholding the text colors, and using PyTesseract to read the remaining text.}
+            \resumeItem{Collected the average live platinum price of the 10 current cheapest sell-orders using the warframe.market API for each item in the generated names-list.}
             \resumeItem{Decreased the time it takes to gather relevant data by 98.667\% per item page compared to manual calculation.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Sports Betting House Edge Web Scraper} $|$ \emph{Python, Selenium}}{}
           \resumeItemListStart
-            \resumeItem{Built a data pipeline that scrapes point spreads of a variety of live real-life sports games from a casino website.}
+            \resumeItem{Built a pipeline that scrapes point spreads of 3 types of live real-life sports games from a casino website.}
             \resumeItem{Computed the house edge of each unique game from the point spread automatically, decreasing the time it takes to acquire this information from each game by 99.7\% compared to manual calculation.}
             \resumeItem{Provided an additional factor (house edge) for consideration in sports betting models which improved certain models by up to 5.9\% over a 21-day period.}
           \resumeItemListEnd
