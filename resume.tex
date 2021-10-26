@@ -125,12 +125,20 @@
 \def \websitelink {https://www.thienlongtran.com/}
 \def \websitetext {/thienlongtran.com}
 
+\def \phoneicon {\faPhone}
+\def \phonelink {tel:346-204-9381}
+\def \phonetext {(346)-204-9381}
+
 \definecolor{LinkColor}{HTML}{3e70bb}
 
 \def \linkedin {\linkedinicon\hspace{3pt}\textcolor{LinkColor}{\href{\linkedinlink}{\linkedintext}}}
 \def \email {\emailicon\hspace{3pt}\textcolor{LinkColor}{\href{\emaillink}{\emailtext}}}
+
 \def \github {\githubicon \hspace{3pt}\textcolor{LinkColor}{\href{\githublink}{\githubtext}}}
+
 \def \website {\websiteicon\hspace{3pt}\textcolor{LinkColor}{\href{\websitelink}{\websitetext}}}
+
+\def \phone {\phoneicon\hspace{3pt}\textcolor{LinkColor}{\href{\phonelink}{\phonetext}}}
 
 
 %----------HEADING----------
@@ -142,6 +150,7 @@
 \begin{center}
     \textbf{\Huge \scshape Thien Tran} \\ \vspace{1pt}
     {\email} $|$ 
+    {\phone} $|$ 
     {\website} $|$
     {\linkedin} $|$
     {\github}
@@ -152,13 +161,18 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of New Orleans}{Aug. 2019 - Dec. 2021 (expected)}
-      {B.S. Computer Science, 3.984 GPA}{New Orleans, LA}
+      {Georgia Institute of Technology}{Starting Jan. 2022}
+      {M.S. Computer Science}{(Online) Atlanta, GA}
       \resumeItemListStart
-        \resumeItem{\textbf{Honors: }President's List (2019-2021), Achievement in Computer Science Scholarship (2020-2021)}
-        \resumeItem{\textbf{Activities:} Toastmasters (President), International Game Developers Association, Google Developer Student Club, Robotics Club, Vietnamese American Student Association}
-        \resumeItem{\textbf{Completed Coursework:} Data Structures \& Algorithms, Software Design I \& II (Java), Machine Structure and Assembly Language, Systems Programming, Theory of Computation, Programming Language Structure}
-        \resumeItem{\textbf{Current Courses:} Python for Data Science \& Artificial Intelligence, Computer Design \& Organization, Computer Networks and Telecommunications, Operating Systems, Undergrad Seminar, Independent Research}
+        \resumeItem{\textbf{Accepted;} matriculating Spring 2022}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of New Orleans}{Aug. 2019 - Dec. 2021 (expected)}
+      {B.S. Computer Science, 3.987 GPA}{New Orleans, LA}
+      \resumeItemListStart
+        \resumeItem{\textbf{Activities:} Google Developer Student Club (DSC Lead), Toastmasters (President), IEEE}
+        \resumeItem{\textbf{Honors: }President's List (All Semesters), Achievement in Computer Science Scholarship (2020-2021)}
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms,  Python for DS \& AI, Database Management Systems, Cloud Computing, Computer Networks, Operating Systems, Software Design I \& II (Java)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
   
@@ -168,34 +182,35 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, HTML/CSS, JavaScript} \\
+     \textbf{Languages}{: Java, Python, HTML/CSS, JavaScript, SQL} \\
      \textbf{Technologies}{: Git, Unity, Jupyter Notebook} \\
-     \textbf{Libraries}{: NumPy, Pandas, Matplotlib}
+     \textbf{Libraries}{: NumPy, Pandas, Matplotlib, scikit-learn} \\
+     \textbf{DevOps}{: Amazon Web Services, Terraform, GitLab CI/CD} \\
+     \textbf{Certifications}{: AWS Solutions Architect - Associate, AWS Cloud Practitioner}
     }}
  \end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
+    
     \resumeSubheading
-      {Undergraduate Research Assistant}{Jan. 2021 -- Present}
+      {Cloud Infrastructure Engineer Intern}{May 2021 - Jul. 2021}
+      {USAA}{Plano, TX}
+    \resumeItemListStart
+      \resumeItem {Innovated a new directory structure for publishing automated infrastructure test results of 70 projects to an archive using GitLab CI/CD pipelines which allowed for easier feature-based auditing and reduces cluttering by 84\%.}
+      \resumeItem {Modified a custom Terraform provider affecting 55 projects using GoLang to allow for automatic AWS resource tagging on one parameter if not provided by a user, or manual tagging otherwise.}
+      \resumeItem {Developed a selection of 5 AWS Systems Manager (SSM) documents and automation using Terraform and GitLab CI/CD which reduced the time it takes to conduct network connectivity testing from 3-4 hours with 2-3 engineers to 35-45 minutes with a single engineer.}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Undergraduate Research Assistant}{Jan. 2021 - May 2021}
       {University of New Orleans}{New Orleans, LA}
       \resumeItemListStart
-        \resumeItem{Create immersive eXtended Reality (XR) games using Unity and C\# under advisement of Dr. Farjana Eishita to discreetly detect 8 types of cognitive distortions and other mental health conditions.}
-        \resumeItem{Convert 52 scenes of an existing cognitive distortion detection game from Augmented Reality (handheld phone-based) to Mixed and Virtual Reality (head-mounted display) for player-experience comparisons.}
-        \resumeItem{Conduct player-experience testing and data validation to ensure effective results.}
+        \resumeItem{Developed immersive eXtended Reality (XR) games using Unity and C\# under advisement of Dr. Farjana Eishita to discreetly detect 8 types of cognitive distortions and other mental health conditions.}
+        \resumeItem{Converted 42 scenes of an existing cognitive distortion detection game from Augmented Reality (handheld phone-based) to Mixed and Virtual Reality (head-mounted display) for player-experience comparisons.}
+        \resumeItem{Conducted early-stage player-experience testing on 9 individuals to identify bugs and verify effective game-play engagement.}
       \resumeItemListEnd
-      
-    \resumeSubheading
-      {Admissions Tour Guide}{Jan. 2020 -- Dec. 2020}
-      {University of New Orleans}{New Orleans, LA}
-    \resumeItemListStart
-      \resumeItem {Led daily physical and virtual campus tours for a total of about 200 interested students and their families.}
-      \resumeItem {Communicated with a total of about 40 prospective students about various topics regarding university through weekly Q\&A sessions alongside 2 other tour guides.}
-      \resumeItem {Engaged in 7 large university efforts and events to orient incoming and recruit new students.}
-      \resumeItem {Collaborated with 19 other tour guides, admissions counselors, and other Office of Admissions staff to effectively fulfill overarching objectives of the office.}
-    \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
@@ -214,15 +229,15 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Warframe Inventory Market Info} $|$ \emph{Python, OpenCV, PyTesseract}}{}
+          {\textbf{Warframe Inventory Market Info} $|$ \emph{Python}}{}
           \resumeItemListStart
-            \resumeItem{Developed a program that gathers 4 different attributes about users’ in-game Warframe inventory items including live web market value, and saves important information to an Excel spreadsheet.}
+            \resumeItem{Developed a program that gathers 4 different attributes about users’ in-game Warframe inventory items and saves important information to an Excel spreadsheet.}
             \resumeItem{Generated a names-list of 358 types of items automatically using OpenCV to isolate item names from the inventory-screen image by thresholding the text colors, and using PyTesseract to read the remaining text.}
-            \resumeItem{Collected the average live platinum price of the 10 current cheapest sell-orders using the warframe.market API for each item in the generated names-list.}
+            \resumeItem{Collected the average platinum price of the 10 current cheapest live web market value sell-orders using the warframe.market API for each item in the generated names-list.}
             \resumeItem{Decreased the time it takes to gather relevant data by 98.667\% per item page compared to manual calculation.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Sports Betting House Edge Web Scraper} $|$ \emph{Python, Selenium}}{}
+          {\textbf{Sports Betting House Edge Web Scraper} $|$ \emph{Python}}{}
           \resumeItemListStart
             \resumeItem{Built a pipeline that scrapes point spreads of 3 types of live real-life sports games from a casino website.}
             \resumeItem{Computed the house edge of each unique game from the point spread automatically, decreasing the time it takes to acquire this information from each game by 99.7\% compared to manual calculation.}
