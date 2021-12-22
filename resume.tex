@@ -114,8 +114,8 @@
 \def \linkedintext {/thienlongtran}
 
 \def \emailicon {\faEnvelope}
-\def \emaillink {mailto:tltran5@uno.edu}
-\def \emailtext {tltran5@uno.edu}
+\def \emaillink {mailto:ttran384@gatech.edu}
+\def \emailtext {ttran384@gatech.edu}
 
 \def \githubicon {\faGithub}
 \def \githublink {https://github.com/thienlongtran}
@@ -164,15 +164,15 @@
       {Georgia Institute of Technology}{Starting Jan. 2022}
       {M.S. Computer Science}{(Online) Atlanta, GA}
       \resumeItemListStart
-        \resumeItem{\textbf{Accepted;} matriculating Spring 2022}
+        \resumeItem{\textbf{Specialization:} Interactive Intelligence}
       \resumeItemListEnd
     \resumeSubheading
-      {University of New Orleans}{Aug. 2019 - Dec. 2021 (expected)}
-      {B.S. Computer Science, 3.987 GPA}{New Orleans, LA}
+      {University of New Orleans}{Aug. 2019 - Dec. 2021}
+      {B.S. Computer Science, 3.99 GPA}{New Orleans, LA}
       \resumeItemListStart
-        \resumeItem{\textbf{Activities:} Google Developer Student Club (DSC Lead), Toastmasters (President), IEEE}
-        \resumeItem{\textbf{Honors: }President's List (All Semesters), Achievement in Computer Science Scholarship (2020-2021)}
-        \resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms,  Python for DS \& AI, Database Management Systems, Cloud Computing, Computer Networks, Operating Systems, Software Design I \& II (Java)}
+        \resumeItem{\textbf{Leadership:} Google Developer Student Club (DSC Lead), Toastmasters (President), SGA (Senator)}
+        %\resumeItem{\textbf{Honors: }President's List (All Semesters), Achievement in Computer Science Scholarship (2020-2021)}
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms, Algorithm Analysis, Python for DS \& AI, Database Management Systems, Cloud Computing, Computer Networks, Operating Systems, Software Design I \& II (Java)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
   
@@ -185,7 +185,7 @@
      \textbf{Languages}{: Java, Python, HTML/CSS, JavaScript, SQL} \\
      \textbf{Technologies}{: Git, Unity, Jupyter Notebook} \\
      \textbf{Libraries}{: NumPy, Pandas, Matplotlib, scikit-learn} \\
-     \textbf{DevOps}{: Amazon Web Services, Terraform, GitLab CI/CD} \\
+     \textbf{DevOps}{: Amazon Web Services (AWS), Terraform, GitLab CI/CD} \\
      \textbf{Certifications}{: AWS Solutions Architect - Associate, AWS Cloud Practitioner}
     }}
  \end{itemize}
@@ -195,7 +195,7 @@
   \resumeSubHeadingListStart
     
     \resumeSubheading
-      {Cloud Infrastructure Engineer Intern}{May 2021 - Jul. 2021}
+      {Software Engineer Intern - DevOps}{May 2021 - Jul. 2021}
       {USAA}{Plano, TX}
     \resumeItemListStart
       \resumeItem {Innovated a new directory structure for publishing automated infrastructure test results of 70 projects to an archive using GitLab CI/CD pipelines which allowed for easier feature-based auditing and reduces cluttering by 84\%.}
@@ -229,19 +229,19 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
+          {\textbf{Stock Simple Moving Average Pipeline} $|$ \emph{AWS, Python}}{}
+          \resumeItemListStart
+            \resumeItem{Developed an AWS cloud-based pipeline that computes the simple moving average of one of the four OHLC-type stock prices from a CSV input file of stock data.}
+            \resumeItem{Created the cloud infrastructure using the AWS Python SDK (Boto3) by automatically initializing and connecting two S3 buckets, two Lambda functions, one SNS topic, and one DynamoDB NoSQl database table.}
+            \resumeItem{Computed the aggregate simple moving average automatically, decreasing the time it takes to acquire this information from each input file by 99.997\%+ compared to manual calculation.}
+          \resumeItemListEnd
+      \resumeProjectHeading
           {\textbf{Warframe Inventory Market Info} $|$ \emph{Python}}{}
           \resumeItemListStart
             \resumeItem{Developed a program that gathers 4 different attributes about users’ in-game Warframe inventory items and saves important information to an Excel spreadsheet.}
             \resumeItem{Generated a names-list of 358 types of items automatically using OpenCV to isolate item names from the inventory-screen image by thresholding the text colors, and using PyTesseract to read the remaining text.}
             \resumeItem{Collected the average platinum price of the 10 current cheapest live web market value sell-orders using the warframe.market API for each item in the generated names-list.}
             \resumeItem{Decreased the time it takes to gather relevant data by 98.667\% per item page compared to manual calculation.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Sports Betting House Edge Web Scraper} $|$ \emph{Python}}{}
-          \resumeItemListStart
-            \resumeItem{Built a pipeline that scrapes point spreads of 3 types of live real-life sports games from a casino website.}
-            \resumeItem{Computed the house edge of each unique game from the point spread automatically, decreasing the time it takes to acquire this information from each game by 99.7\% compared to manual calculation.}
-            \resumeItem{Provided an additional factor (house edge) for consideration in sports betting models which improved certain models by up to 5.9\% over a 21-day period.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
