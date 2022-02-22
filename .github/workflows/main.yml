@@ -36,6 +36,7 @@ jobs:
             
   update_repository:
     runs-on: ubuntu-latest
+    needs: build_resources
     steps:
       - name: Update Image Preview in Repository
         uses: test-room-7/action-update-file@v1
