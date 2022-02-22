@@ -83,5 +83,6 @@ jobs:
           source_file: 'resume.pdf'
           destination_repo: 'thienlongtran/thienlongtran.github.io'
           destination_folder: 'assets'
+          destination_branch: 'master'
           user_email: 'tltran5@uno.edu'
           user_name: 'thienlongtran'
