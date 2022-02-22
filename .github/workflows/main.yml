@@ -62,5 +62,28 @@ jobs:
         uses: test-room-7/action-update-file@v1
         with:
             file-path: resume.pdf
-            commit-msg: CI/CD Pipeline - Updated PDF
+            commit-msg: CI/CD Pipeline - Updated Resume PDF
             github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  update_personal_website:
+    runs-on: ubuntu-latest
+    needs: build_resources
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/download-artifact@v2
+        with:
+          name: resume_resources
+    
+      - name: Pushes test file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'resume.pdf'
+          destination_repo: 'thienlongtran/thienlongtran.github.io'
+          destination_folder: 'assets'
+          user_email: 'tltran5@uno.edu'
+          user_name: 'thienlongtran'
+          commit_message: 'CI/CD Pipeline - Updated Resume PDF'
+            
