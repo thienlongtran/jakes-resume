@@ -15,16 +15,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
           
-      - name: LaTeX compilation
+      - name: LaTeX PDF Compilation
         uses: dante-ev/latex-action@2021-A
         with:
           root_file: resume.tex
-        
-      - uses: actions/upload-artifact@v2
-        with:
-          name: resume.pdf
-          path: resume.pdf
           
-      - name: Run a done script
-        run: echo Done!
+      - name: Update PDf in Repository
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: resume.pdf
+            commit-msg: CI/CD Pipeline - Updated PDF
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+        
+      #- uses: actions/upload-artifact@v2
+      #  with:
+      #    name: resume.pdf
+      #    path: resume.pdf
