@@ -29,8 +29,10 @@ jobs:
             commit-msg: CI/CD Pipeline - Updated PDF
             github-token: ${{ secrets.GITHUB_TOKEN }}
             
-      - name: Install ImageMagick
-        run: sudo apt-get install imagemagick
+      - name: Install ImageMagick & GhostScript
+        run: |
+              sudo apt-get install imagemagick
+              sudo apt-get install ghostscript
         
       - name: Allow PDF-PNG Conversion
         run: |
