@@ -75,7 +75,7 @@ jobs:
         with:
           name: resume_resources
     
-      - name: Pushes test file
+      - name: Pushing PDF to Website Repositoryy
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -85,5 +85,3 @@ jobs:
           destination_folder: 'assets'
           user_email: 'tltran5@uno.edu'
           user_name: 'thienlongtran'
-          commit_message: 'CI/CD Pipeline - Updated Resume PDF'
-            
