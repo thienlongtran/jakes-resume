@@ -22,7 +22,7 @@ jobs:
         with:
           root_file: resume.tex
           
-      - name: Update PDf in Repository
+      - name: Update PDF in Repository
         uses: test-room-7/action-update-file@v1
         with:
             file-path: resume.pdf
@@ -32,10 +32,10 @@ jobs:
       - name: Install ImageMagick
         run: sudo apt-get install imagemagick
         
-      - name: Allow PDF-PNG Conversion
-        run: sudo sed -i_bak \
-            's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
-            /etc/ImageMagick-6/policy.xml
+      #- name: Allow PDF-PNG Conversion
+      #  run: sudo sed -i_bak \
+      #      's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
+      #      /etc/ImageMagick-6/policy.xml
             
       - name: Update Resume Image 
         run: convert -verbose -density 300 -trim -background white -alpha remove -alpha off resume.pdf -quality 100 resume.png
