@@ -1,0 +1,31 @@
+name: UpdateResumeImage
+
+on:
+  push:
+    paths:
+      - "resume.tex"
+      
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+          
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: resume.tex
+          
+      # Runs a single command using the runners shell
+      - name: Run a done script
+        run: echo Done!
