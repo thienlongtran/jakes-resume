@@ -38,7 +38,7 @@ jobs:
               sudo sed -i_bak 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
             
       - name: Update Resume Image 
-        run: convert -verbose -density 300 -trim -background white -alpha remove -alpha off resume.pdf -quality 100 resume.png
+        run: convert -verbose -density 100 -trim -background white -alpha remove -alpha off resume.pdf -quality 100 resume.png
           
       - name: Update Image Preview in Repository
         uses: test-room-7/action-update-file@v1
