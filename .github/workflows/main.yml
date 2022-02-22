@@ -74,13 +74,15 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: resume_resources
-    
+          
+      - name: Renaming Resume PDF File
+        run: mv resume.pdf Thien_Tran_Resume.pdf
       - name: Pushing PDF to Website Repositoryy
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: 'resume.pdf'
+          source_file: 'Thien_Tran_Resume.pdf'
           destination_repo: 'thienlongtran/thienlongtran.github.io'
           destination_folder: 'assets'
           destination_branch: 'master'
