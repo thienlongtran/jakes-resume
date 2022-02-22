@@ -33,7 +33,9 @@ jobs:
         run: sudo apt-get install imagemagick
         
       - name: Allow PDF-PNG Conversion
-        run: sudo sed -i 's/^.*policy.*coder.*none.*PDF.*//' /etc/ImageMagick-6/policy.xml
+        run: |
+              sudo sed -i 's/^.*policy.*coder.*none.*PDF.*//' /etc/ImageMagick-6/policy.xml
+              sudo sed -i_bak 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
             
       - name: Update Resume Image 
         run: convert -verbose -density 300 -trim -background white -alpha remove -alpha off resume.pdf -quality 100 resume.png
