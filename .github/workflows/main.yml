@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  build:
+  build_resources:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,17 +20,10 @@ jobs:
         uses: dante-ev/latex-action@2021-A
         with:
           root_file: resume.tex
-          
-      - name: Update PDF in Repository
-        uses: test-room-7/action-update-file@v1
-        with:
-            file-path: resume.pdf
-            commit-msg: CI/CD Pipeline - Updated PDF
-            github-token: ${{ secrets.GITHUB_TOKEN }}
             
       - name: Install ImageMagick & GhostScript
         run: |
-              sudo apt-get install imagemagick
+              sudo apt-get install imagemagicktrim
               sudo apt-get install ghostscript
         
       - name: Allow PDF-PNG Conversion
@@ -39,11 +32,21 @@ jobs:
               sudo sed -i_bak 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
             
       - name: Update Resume Image 
-        run: convert -verbose -density 500 -trim -background white -alpha remove -alpha off resume.pdf -quality 100 resume.png
-          
+        run: convert -verbose -density 500 -background white -alpha remove -alpha off resume.pdf -quality 100 resume.png
+            
+  update_repository:
+    runs-on: ubuntu-latest
+    steps:
       - name: Update Image Preview in Repository
         uses: test-room-7/action-update-file@v1
         with:
             file-path: resume.png
             commit-msg: CI/CD Pipeline - Updated Resume Image
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            
+      - name: Update PDF in Repository
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: resume.pdf
+            commit-msg: CI/CD Pipeline - Updated PDF
             github-token: ${{ secrets.GITHUB_TOKEN }}
