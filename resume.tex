@@ -113,12 +113,9 @@
 \def \linkedinlink {https://www.linkedin.com/in/thienlongtran}
 \def \linkedintext {/thienlongtran}
 
-\def \phoneicon {\faPhone}
-\def \phonetext {(346)-204-9381}
-
 \def \emailicon {\faEnvelope}
-\def \emaillink {mailto:tltran5@uno.edu}
-\def \emailtext {tltran5@uno.edu}
+\def \emaillink {mailto:ttran384@gatech.edu}
+\def \emailtext {ttran384@gatech.edu}
 
 \def \githubicon {\faGithub}
 \def \githublink {https://github.com/thienlongtran}
@@ -128,11 +125,20 @@
 \def \websitelink {https://www.thienlongtran.com/}
 \def \websitetext {/thienlongtran.com}
 
-\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
-\def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
-\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
-\def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
-\def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
+\def \phoneicon {\faPhone}
+\def \phonelink {tel:346-204-9381}
+\def \phonetext {(346)-204-9381}
+
+\definecolor{LinkColor}{HTML}{3e70bb}
+
+\def \linkedin {\linkedinicon\hspace{3pt}\textcolor{LinkColor}{\href{\linkedinlink}{\linkedintext}}}
+\def \email {\emailicon\hspace{3pt}\textcolor{LinkColor}{\href{\emaillink}{\emailtext}}}
+
+\def \github {\githubicon \hspace{3pt}\textcolor{LinkColor}{\href{\githublink}{\githubtext}}}
+
+\def \website {\websiteicon\hspace{3pt}\textcolor{LinkColor}{\href{\websitelink}{\websitetext}}}
+
+\def \phone {\phoneicon\hspace{3pt}\textcolor{LinkColor}{\href{\phonelink}{\phonetext}}}
 
 
 %----------HEADING----------
@@ -144,6 +150,7 @@
 \begin{center}
     \textbf{\Huge \scshape Thien Tran} \\ \vspace{1pt}
     {\email} $|$ 
+    {\phone} $|$ 
     {\website} $|$
     {\linkedin} $|$
     {\github}
@@ -154,39 +161,58 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of New Orleans}{Aug. 2019 - Dec. 2021 (expected)}
-      {B.S. Computer Science, 3.984 GPA}{New Orleans, LA}
+      {Georgia Institute of Technology}{Jan. 2022 - Dec. 2023 (exp.)}
+      {M.S. Computer Science}{(Online) Atlanta, GA}
       \resumeItemListStart
-        \resumeItem{\textbf{Honors: }President's List (2019-2021), Achievement in Computer Science Scholarship (2020-2021)}
-        \resumeItem{\textbf{Activities:} Toastmasters (President), International Game Developers Association, Google Developer Student Club, Robotics Club, Vietnamese American Student Association}
-        \resumeItem{\textbf{Completed Coursework:} Data Structures \& Algorithms, Software Design I \& II (Java), Machine Structure and Assembly Language, Systems Programming, Theory of Computation, Programming Language Structure}
-        \resumeItem{\textbf{Current Courses:} Python for Data Science \& Artificial Intelligence, Computer Design \& Organization, Computer Networks and Telecommunications, Operating Systems, Undergrad Seminar, Independent Research}
+        \resumeItem{\textbf{Current Courses:} Knowledge-Based AI}
+        
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of New Orleans}{Aug. 2019 - Dec. 2021}
+      {B.S. Computer Science, 3.99 GPA}{New Orleans, LA}
+      \resumeItemListStart
+        %\resumeItem{\textbf{Leadership:} Google Developer Student Club (DSC Lead), Toastmasters (President), SGA (Senator)}
+        %\resumeItem{\textbf{Honors: }President's List (All Semesters), Achievement in Computer Science Scholarship (2020-2021)}
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms, Algorithm Analysis, Python for DS \& AI, Database Management Systems, Cloud Computing, Computer Networks, Operating Systems, Software Design I \& II (Java)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
   
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+\section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, HTML/CSS, JavaScript} \\
-     \textbf{Technologies}{: Git/Github, Unity, Jupyter Notebook} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Languages}{: Java, Python, HTML/CSS, JavaScript, SQL} \\
+     \textbf{Technologies}{: Git, Unity, Jupyter Notebook} \\
+     \textbf{Libraries}{: NumPy, Pandas, Matplotlib, scikit-learn} \\
+     \textbf{DevOps}{: Amazon Web Services (AWS), Terraform, GitLab CI/CD} \\
+     \textbf{Certifications}{: AWS Solutions Architect - Associate, AWS Cloud Practitioner}
     }}
  \end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
+     \resumeSubheading
+      {Incoming Software Engineer Intern (DevOps)}{May 2022 - Aug. 2022}
+      {PayPal/Venmo}{Austin, TX}
     \resumeSubheading
-      {Undergraduate Research Assistant}{Jan. 2020 -- Present}
+      {Software Engineer Intern (DevOps)}{May 2021 - Jul. 2021}
+      {USAA}{Plano, TX}
+    \resumeItemListStart
+      \resumeItem {Innovated a new directory structure for publishing automated infrastructure test results of 70 projects to an archive using GitLab CI/CD pipelines which allowed for easier feature-based auditing and reduces cluttering by 84\%.}
+      \resumeItem {Modified a custom Terraform provider affecting 55 projects using GoLang to allow for automatic AWS resource tagging on one parameter if not provided by a user, or manual tagging otherwise.}
+      \resumeItem {Developed a selection of 5 AWS Systems Manager (SSM) documents and automation using Terraform and GitLab CI/CD which reduced the time it takes to conduct network connectivity testing from 3-4 hours with 2-3 engineers to 35-45 minutes with a single engineer.}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Undergraduate Research Assistant}{Jan. 2021 - May 2021}
       {University of New Orleans}{New Orleans, LA}
       \resumeItemListStart
-        \resumeItem{Create immersive eXtended Reality (XR) games using Unity and C\# to discreetly detect cognitive distortions and other mental health conditions under advisement of Dr. Farjana Eishita.}
-        \resumeItem{Convert existing cognitive distortion detection game from Augmented Reality (handheld phone-based) to Mixed Reality (head-mounted display) for player-experience comparisons.}
-        \resumeItem{Conduct player experience testing and data validation to ensure effective results.}
+        \resumeItem{Developed immersive eXtended Reality (XR) games using Unity and C\# under advisement of Dr. Farjana Eishita to discreetly detect 8 types of cognitive distortions and other mental health conditions.}
+        \resumeItem{Converted 42 scenes of an existing cognitive distortion detection game from Augmented Reality (handheld phone-based) to Mixed and Virtual Reality (head-mounted display) for player-experience comparisons.}
+        \resumeItem{Conducted early-stage player-experience testing on 9 individuals to identify bugs and verify effective game-play engagement.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -206,19 +232,18 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Warframe Inventory Market Info} $|$ \emph{Python, OpenCV, PyTesseract}}{}
+          {\textbf{Stock Simple Moving Average Pipeline} $|$ \emph{AWS, Python}}{}
           \resumeItemListStart
-            \resumeItem{Developed a program that automatically gathers information about users’ in-game Warframe inventory items including live web market value and in-game trade value, and saves important data to an Excel spreadsheet.}
-            \resumeItem{Detected items automatically by using OpenCV to capture screen and isolate item names from the image bythresholding the text colors, and by using PyTesseract to recognize the remaining text.}
-            \resumeItem{Decreased time it takes to gather relevant data by 98.667\% per item page.}
+            \resumeItem{Developed an AWS cloud-based pipeline that computes the simple moving average of one of the four OHLC-type stock prices from a CSV input file of stock data.}
+            \resumeItem{Created the cloud infrastructure using the AWS Python SDK (Boto3) by automatically initializing and connecting two S3 buckets, two Lambda functions, one SNS topic, and one DynamoDB NoSQl database table.}
+            \resumeItem{Computed the aggregate simple moving average automatically, decreasing the time it takes to acquire this information from each input file by 99.997\%+ compared to manual calculation.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Sports Betting House Edge Web Scraper} $|$ \emph{Python, Selenium}}{}
+          {\textbf{Warframe Inventory Market Info} $|$ \emph{Python}}{}
           \resumeItemListStart
-            \resumeItem{Built a program that scrapes point spreads of a variety of live real-life sports games from a casino website.}
-            \resumeItem{Computed the house edge of each unique game from the point spread automatically, decreasing time it takes to acquire this info from each game by 99.7\% compared to manual calculation.}
-            \resumeItem{Provided an additional factor (house edge) for consideration in sports betting models.}
-            \resumeItem{Improved certain sports betting models by up to 3.4\%.}
+            \resumeItem{Developed a program that gathers 4 different attributes about users’ in-game Warframe inventory items, decreasing the time it takes to gather relevant data by 98.667\% per item page compared to manual calculation.}
+            \resumeItem{Generated a names-list of 358 types of items automatically using OpenCV to isolate item names from the inventory-screen image by thresholding the text colors, and using PyTesseract to read the remaining text.}
+            \resumeItem{Collected the average platinum price of the 10 current cheapest live web market value sell-orders using the warframe.market API for each item in the generated names-list.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
