@@ -104,6 +104,9 @@ jobs:
           user_email: 'tltran5@uno.edu'
           user_name: 'thienlongtran'
           
+      - name: Waiting 180 seconds for Personal Website GitHub Pages Deployment...
+        run: sleep 180
+        
       - name: Update LinkedIn Featured Preview
         run: |
               curl 'https://www.linkedin.com/post-inspector-api/postInspector/https%3A%2F%2Fthienlongtran.github.io%2Fassets%2Fresume%2Fresume.html' \
