@@ -50,24 +50,28 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: resume_resources
-    
+        
       - name: Update Image Preview in Repository
-        uses: test-room-7/action-update-file@v1
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-            file-path: resume.png
-            commit-msg: CI/CD Pipeline - Updated Resume Image from https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            committer-name: thienlongtran
-            committer-email: tltran5@uno.edu
+          source_file: 'resume.png'
+          destination_repo: 'thienlongtran/resume'
+          destination_branch: 'master'
+          user_email: 'tltran5@uno.edu'
+          user_name: 'thienlongtran'
             
       - name: Update PDF in Repository
-        uses: test-room-7/action-update-file@v1
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-            file-path: resume.pdf
-            commit-msg: CI/CD Pipeline - Updated Resume PDF from https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            committer-name: thienlongtran
-            committer-email: tltran5@uno.edu
+          source_file: 'resume.pdf'
+          destination_repo: 'thienlongtran/resume'
+          destination_branch: 'master'
+          user_email: 'tltran5@uno.edu'
+          user_name: 'thienlongtran'
 
   update_personal_website:
     runs-on: ubuntu-latest
@@ -84,7 +88,7 @@ jobs:
               mv resume.pdf Thien_Tran_Resume.pdf
               mv resume.png Thien_Tran_Resume.png
               
-      - name: Pushing Resume PDF to Website Repositoryy
+      - name: Pushing Resume PDF to Website Repository
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -96,7 +100,7 @@ jobs:
           user_email: 'tltran5@uno.edu'
           user_name: 'thienlongtran'
           
-      - name: Pushing Resume PNG to Website Repositoryy
+      - name: Pushing Resume PNG to Website Repository
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
