@@ -55,7 +55,7 @@ jobs:
         uses: test-room-7/action-update-file@v1
         with:
             file-path: resume.png
-            commit-msg: CI/CD Pipeline - Updated Resume Image
+            commit-msg: CI/CD Pipeline - Updated Resume Image from https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}
             github-token: ${{ secrets.GITHUB_TOKEN }}
             committer-name: thienlongtran
             committer-email: tltran5@uno.edu
@@ -64,7 +64,7 @@ jobs:
         uses: test-room-7/action-update-file@v1
         with:
             file-path: resume.pdf
-            commit-msg: CI/CD Pipeline - Updated Resume PDF
+            commit-msg: CI/CD Pipeline - Updated Resume PDF from https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}
             github-token: ${{ secrets.GITHUB_TOKEN }}
             committer-name: thienlongtran
             committer-email: tltran5@uno.edu
