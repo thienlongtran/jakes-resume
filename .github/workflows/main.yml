@@ -57,6 +57,8 @@ jobs:
             file-path: resume.png
             commit-msg: CI/CD Pipeline - Updated Resume Image
             github-token: ${{ secrets.GITHUB_TOKEN }}
+            committer-name: thienlongtran
+            committer-email: tltran5@uno.edu
             
       - name: Update PDF in Repository
         uses: test-room-7/action-update-file@v1
@@ -64,6 +66,8 @@ jobs:
             file-path: resume.pdf
             commit-msg: CI/CD Pipeline - Updated Resume PDF
             github-token: ${{ secrets.GITHUB_TOKEN }}
+            committer-name: thienlongtran
+            committer-email: tltran5@uno.edu
 
   update_personal_website:
     runs-on: ubuntu-latest
