@@ -87,7 +87,7 @@ jobs:
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ secrets.credentials }}
-          filename: "resume.pdf "
+          filename: "resume.pdf"
           folderId: ${{ secrets.folderId }}
           name: "Thien's Current Resume.pdf"
           overwrite: "true"
