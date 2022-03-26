@@ -103,7 +103,7 @@ jobs:
           name: resume_resources
           
       - name: Set Date and Time
-        run: echo "CURRENT_DATE_AND_TIME=$(TZ=America/New_Orleans date +'%D_%H:%M:%S)" >> ${GITHUB_ENV}
+        run: echo "CURRENT_DATE_AND_TIME=$(TZ=America/New_Orleans date +'%D_%H:%M:%S')" >> ${GITHUB_ENV}
 
       - name: Upload to Shared Resumes Drive
         uses: adityak74/google-drive-upload-git-action@main
