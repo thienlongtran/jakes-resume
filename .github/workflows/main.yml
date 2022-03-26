@@ -107,8 +107,8 @@ jobs:
         with:
           credentials: ${{ secrets.credentials }}
           filename: "resume.pdf"
-          folderId: ${{ secrets.folderId }}
-          name: "ThienTran_${GITHUB_RUN_ID}.pdf"
+          folderId: ${{ secrets.Resume_History_folderID }}
+          name: "ThienTran_${{ GITHUB_RUN_ID }}.pdf"
           
   update_personal_website:
     runs-on: ubuntu-latest
