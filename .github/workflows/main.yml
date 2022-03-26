@@ -101,6 +101,9 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: resume_resources
+          
+      - name: Set Date and Time
+        run: echo "CURRENT_DATE_AND_TIME=$(TZ=America/New_Orleans date +'%D_%H:%M:%S)" >> ${GITHUB_ENV}
 
       - name: Upload to Shared Resumes Drive
         uses: adityak74/google-drive-upload-git-action@main
@@ -108,7 +111,7 @@ jobs:
           credentials: ${{ secrets.credentials }}
           filename: "resume.pdf"
           folderId: ${{ secrets.Resume_History_folderID }}
-          name: "ThienTran_${{ github.run_id }}.pdf"
+          name: "ThienTran_${{ github.CURRENT_DATE_AND_TIME }}.pdf"
           
   update_personal_website:
     runs-on: ubuntu-latest
