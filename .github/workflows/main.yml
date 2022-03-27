@@ -89,7 +89,7 @@ jobs:
           credentials: ${{ secrets.credentials }}
           filename: "resume.pdf"
           folderId: ${{ secrets.folderId }}
-          name: "Thien's Current Resume.pdf"
+          name: "ThienTran_Current_Resume.pdf"
           overwrite: "true"
   
   upload_google_drive_resume_history:
