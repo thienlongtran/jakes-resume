@@ -94,7 +94,7 @@ jobs:
   
   upload_google_drive_resume_history:
     runs-on: ubuntu-latest
-    needs: build_resources
+    needs: update_google_drive_current_resume
     steps:
       - uses: actions/checkout@v2
       
